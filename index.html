@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullstack</title>
+    <style>
+        /* CSS Global */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f0f4f8;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #5e35b1; /* Morado oscuro */
+            padding: 20px;
+            border-bottom: 4px solid #512da8; /* Morado más claro */
+        }
+        header .contact-info {
+            font-size: 14px;
+            color: white;
+        }
+        header .contact-info span {
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 25px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        nav ul li a:hover {
+            color: #c5cae9; /* Azul claro */
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: white; /* Fondo blanco */
+            text-align: center;
+            color: #5e35b1; /* Morado oscuro */
+            padding: 120px 20px;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            margin: 0;
+            color: #5e35b1; /* Morado oscuro */
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave para resaltar el texto */
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            color: #5e35b1;
+        }
+        .hero button {
+            background-color: #3f51b5; /* Azul fuerte */
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .hero button:hover {
+            background-color: #303f9f; /* Azul más oscuro */
+        }
+
+        /* Footer (adornos) */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #5e35b1; /* Morado oscuro */
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="contact-info">
+            <span>Melisa Castillon</span> | 
+            <span>melisacastillon27@gmail.com</span> |
+            <span>+51 991308288</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="frontend.html">Frontend</a></li>
+                <li><a href="backend.html">Backend</a></li>
+                <li><a href="herramientas.html">Herramientas</a></li>
+                <li><a href="test.php">PHP</a></li> 
+                <li><a href="mostrar.php">Mostrar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Desarrollo Web Fullstack</h1>
+        <p>EMPLEA HERRAMIENTAS PARA HACER TU PÁGINA</p>
+        <button onclick="window.location.href='test.php'">Iniciar</button>
+    </section>
+    <footer>
+        <p>&copy; 2025 Fullstack - Todos los derechos reservados</p>
+    </footer>
+    
+</body>
+</html>

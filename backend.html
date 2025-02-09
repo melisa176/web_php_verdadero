@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend - Fullstack</title>
+    <style>
+        /* CSS Global */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f0f4f8;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #5e35b1; /* Morado oscuro */
+            padding: 20px;
+            border-bottom: 4px solid #512da8; /* Morado más claro */
+        }
+        header .contact-info {
+            font-size: 14px;
+            color: white;
+        }
+        header .contact-info span {
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 25px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        nav ul li a:hover {
+            color: #c5cae9; /* Azul claro */
+        }
+
+        /* Sección de contenido */
+        .content {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .content h2 {
+            font-size: 2.5rem;
+            color: #5e35b1;
+        }
+        .content p {
+            font-size: 1.2rem;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 900px;
+            line-height: 1.6;
+        }
+        .content ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 0;
+        }
+        .content ul li {
+            background-color: #e8eaf6;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
+        .content ul li h3 {
+            color: #5e35b1;
+            font-size: 1.5rem;
+        }
+        .content ul li p {
+            color: #333;
+            font-size: 1rem;
+        }
+        .content button {
+            background-color: #3f51b5; /* Azul fuerte */
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            margin-top: 30px;
+        }
+        .content button:hover {
+            background-color: #303f9f; /* Azul más oscuro */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #5e35b1; /* Morado oscuro */
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="contact-info">
+            <span>Melisa Castillon</span> | 
+            <span>melisacastillon27@gmail.com</span> |
+            <span>+51 991308288</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="frontend.html">Frontend</a></li>
+                <li><a href="backend.html">Backend</a></li>
+                <li><a href="herramientas.html">Herramientas </a></li>
+                <li><a href="registrar.php">Registrarse</a></li> 
+                <li><a href="login.php">Inicar sesión</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h2>¿Qué es el Desarrollo Backend?</h2>
+        <p>El desarrollo backend se centra en el lado del servidor, que es responsable de la lógica de negocios, las bases de datos y el procesamiento de datos detrás de escena de las aplicaciones web y móviles.</p>
+        <p>Mientras que el frontend es la parte visible de una página web, el backend hace que todo funcione. Es la columna vertebral de cualquier aplicación moderna y está estrechamente integrado con el frontend para proporcionar una experiencia de usuario fluida.</p>
+
+        <h3>Habilidades clave en Backend</h3>
+        <ul>
+            <li>
+                <h3>Lenguajes de Programación</h3>
+                <p>Los desarrolladores backend utilizan lenguajes como PHP, Python, Java, Ruby, y más para crear aplicaciones robustas y seguras.</p>
+            </li>
+            <li>
+                <h3>Bases de Datos</h3>
+                <p>Las bases de datos como MySQL, PostgreSQL y MongoDB son esenciales para almacenar, recuperar y manipular datos.</p>
+            </li>
+            <li>
+                <h3>APIs</h3>
+                <p>Los desarrolladores backend crean y gestionan APIs para permitir que el frontend y otros servicios interactúen con la lógica del servidor.</p>
+            </li>
+        </ul>
+        <p>El desarrollo backend también incluye habilidades como la optimización del rendimiento del servidor, la seguridad, y el trabajo con arquitecturas escalables.</p>
+
+        <button onclick="window.location.href='index.html'">Volver al Inicio</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Fullstack - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

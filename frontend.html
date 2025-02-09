@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend - Fullstack</title>
+    <style>
+        /* CSS Global */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f0f4f8;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #5e35b1; /* Morado oscuro */
+            padding: 20px;
+            border-bottom: 4px solid #512da8; /* Morado más claro */
+        }
+        header .contact-info {
+            font-size: 14px;
+            color: white;
+        }
+        header .contact-info span {
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 25px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        nav ul li a:hover {
+            color: #c5cae9; /* Azul claro */
+        }
+
+        /* Sección de contenido */
+        .content {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .content h2 {
+            font-size: 2.5rem;
+            color: #5e35b1;
+        }
+        .content p {
+            font-size: 1.2rem;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 900px;
+            line-height: 1.6;
+        }
+        .content ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 0;
+        }
+        .content ul li {
+            background-color: #e8eaf6;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
+        .content ul li h3 {
+            color: #5e35b1;
+            font-size: 1.5rem;
+        }
+        .content ul li p {
+            color: #333;
+            font-size: 1rem;
+        }
+        .content button {
+            background-color: #3f51b5; /* Azul fuerte */
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            margin-top: 30px;
+        }
+        .content button:hover {
+            background-color: #303f9f; /* Azul más oscuro */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #5e35b1; /* Morado oscuro */
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="contact-info">
+            <span>Melisa Castillon</span> | 
+            <span>melisacastillon27@gmail.com</span> |
+            <span>+51 991308288</span>
+        </div>
+        <nav>
+            <ul>
+                 <li><a href="index.html">Home</a></li>
+                <li><a href="frontend.html">Frontend</a></li>
+                <li><a href="backend.html">Backend</a></li>
+                <li><a href="herramientas.html">Herramientas</a></li>
+                <li><a href="test.php">PHP</a></li> 
+                <li><a href="mostrar.php">Mostrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h2>¿Qué es el Desarrollo Frontend?</h2>
+        <p>El desarrollo frontend se enfoca en la creación de la parte visual y funcional de una página web o aplicación. Es lo que los usuarios ven e interactúan directamente.</p>
+        <p>El objetivo del frontend es crear experiencias de usuario atractivas y fáciles de usar, utilizando tecnologías como HTML, CSS y JavaScript. Los desarrolladores frontend se aseguran de que una página web no solo se vea bien, sino que también sea rápida, accesible y funcional en una variedad de dispositivos.</p>
+
+        <h3>Habilidades clave en Frontend</h3>
+        <ul>
+            <li>
+                <h3>HTML</h3>
+                <p>HTML es la estructura básica de cualquier página web. Es fundamental para definir el contenido y la organización de la web.</p>
+            </li>
+            <li>
+                <h3>CSS</h3>
+                <p>CSS se utiliza para diseñar y estilizar la página. Permite definir colores, fuentes, márgenes, disposición de los elementos, entre otros.</p>
+            </li>
+            <li>
+                <h3>JavaScript</h3>
+                <p>JavaScript es un lenguaje de programación que hace que las páginas sean interactivas. Permite crear animaciones, formularios dinámicos y contenido actualizado sin recargar la página.</p>
+            </li>
+        </ul>
+        <p>El desarrollo frontend también involucra herramientas y frameworks como React, Angular, Vue.js y más, que ayudan a crear aplicaciones web más dinámicas y modernas.</p>
+
+        <button onclick="window.location.href='index.html'">Volver al Inicio</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Fullstack - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
