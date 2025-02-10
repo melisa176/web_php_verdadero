@@ -2,7 +2,7 @@
 // Conexión a la base de datos
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "cas207";
 $dbname = "login_db";
 
 try {

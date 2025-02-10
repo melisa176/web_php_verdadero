@@ -43,24 +43,132 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
     <style>
-        body {
+
+         /* Reset CSS */
+         * {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #9c27b0, #e91e63);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: #333;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+
+        }
+       
+        /* HEADER */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #0d0155;
+            padding: 20px 50px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+
+             /* BOTÓN CTA */
+             .cta-button {
+            display: inline-block;
+            background: #F59E0B;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 40px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #D97706;
+            transform: scale(1.05);
+        }
+        header.scrolled {
+            background: #027373;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header .logo {
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #FBBF24;
+            transform: scale(1.1);
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            background: linear-gradient(150deg, #551ff8, #6ac1fc);         
+               color: white;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            position: relative;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        footer {
+            background: #0d0155;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+
+
 
         .container {
             width: 400px;
             background: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
             text-align: center;
-            padding: 20px;
         }
 
         .header {
@@ -68,7 +176,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             padding: 20px;
             color: white;
             font-size: 1.5em;
-            border-radius: 10px 10px 0 0;
+        }
+
+        .header img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+        .form {
+            padding: 20px;
         }
 
         .form input[type="text"],
@@ -117,19 +233,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <p>Iniciar Sesión</p>
+
+    <header>
+        <div class="logo">Fullstack</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="frontend.html">Frontend</a></li>
+                <li><a href="backend.html">Backend</a></li>
+                <li><a href="herramientas.html">Herramientas</a></li>
+                <li><a href="registrar.php">Registrarse</a></li>
+                <li><a href="login.php">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="container">
+            <div class="header">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/lock.png" alt="lock-icon">
+                <p>Iniciar Sesión</p>
+            </div>
+            <form class="form" method="POST" action="">
+                <input type="text" name="username" placeholder="Usuario" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <button type="submit">Iniciar Sesión</button>
+                <p>¿No tienes una cuenta? <a href="registrar.php">Regístrate aquí</a></p>
+                <?php if (!empty($error_message)): ?>
+                    <p class="error"><?php echo htmlspecialchars($error_message); ?></p>
+                <?php endif; ?>
+            </form>
         </div>
-        <form class="form" method="POST" action="">
-            <input type="text" name="username" placeholder="Usuario" required>
-            <input type="password" name="password" placeholder="Contraseña" required>
-            <button type="submit">Iniciar Sesión</button>
-            <p>¿No tienes una cuenta? <a href="registrar.php">Regístrate aquí</a></p>
-            <?php if (!empty($error_message)): ?>
-                <p class="error"><?php echo htmlspecialchars($error_message); ?></p>
-            <?php endif; ?>
-        </form>
     </div>
+    
+    <footer>
+        <p>&copy; 2025 Fullstack - Todos los derechos reservados</p>
+    </footer>
 </body>
 </html>

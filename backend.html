@@ -3,161 +3,267 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Backend - Fullstack</title>
+    <title>Desarrollo Backend - Fullstack</title>
+    <script src="https://unpkg.com/scrollreveal"></script> <!-- Animaciones Scroll -->
     <style>
-        /* CSS Global */
-        body {
-            font-family: 'Arial', sans-serif;
+        /* Reset CSS */
+        * {
             margin: 0;
             padding: 0;
-            color: #333;
-            background-color: #f0f4f8;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-x: hidden;
+        }
+        h3{
+            margin: 10px;
+        }
+        /* HEADER */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #5e35b1; /* Morado oscuro */
-            padding: 20px;
-            border-bottom: 4px solid #512da8; /* Morado más claro */
+            background: #0d0155;
+            padding: 20px 50px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
         }
-        header .contact-info {
-            font-size: 14px;
+
+        header.scrolled {
+            background: #111827;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header .logo {
             color: white;
+            font-size: 2rem;
+            font-weight: 700;
         }
-        header .contact-info span {
-            font-weight: bold;
-        }
-        nav ul {
+
+        header nav ul {
             list-style: none;
-            padding: 0;
             display: flex;
             gap: 25px;
         }
-        nav ul li {
-            display: inline;
-        }
-        nav ul li a {
+
+        header nav ul li a {
             text-decoration: none;
             color: white;
+            font-size: 1rem;
             font-weight: bold;
-            font-size: 16px;
-        }
-        nav ul li a:hover {
-            color: #c5cae9; /* Azul claro */
+            transition: color 0.3s ease, transform 0.3s ease;
         }
 
-        /* Sección de contenido */
-        .content {
-            padding: 60px 20px;
-            text-align: center;
+        header nav ul li a:hover {
+            color: #FBBF24;
+            transform: scale(1.1);
         }
-        .content h2 {
-            font-size: 2.5rem;
-            color: #5e35b1;
-        }
-        .content p {
-            font-size: 1.2rem;
-            margin: 20px auto;
-            width: 80%;
-            max-width: 900px;
-            line-height: 1.6;
-        }
-        .content ul {
-            list-style: none;
+
+                .hero {
             display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 40px;
-            padding: 0;
+            height: 100vh;
+            text-align: center;
+            background: linear-gradient(150deg, #551ff8, #6ac1fc);
+            color: white;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+            position: relative;
         }
-        .content ul li {
-            background-color: #e8eaf6;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 250px;
+       
+
+        .hero h1 {
+            font-size: 3.5rem;
+            position: relative;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+        .main-container {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: auto;
             text-align: center;
         }
-        .content ul li h3 {
-            color: #5e35b1;
-            font-size: 1.5rem;
+
+        .main-container h2 {
+            font-size: 2.8rem;
+            color: #1F2937;
+            margin-bottom: 20px;
         }
-        .content ul li p {
-            color: #333;
+
+        /* SECCIÓN DE HABILIDADES */
+        .skills-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-card img {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+
+        .skill-card h3 {
+            margin: 1px;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+
+        .skill-card p {
             font-size: 1rem;
         }
-        .content button {
-            background-color: #3f51b5; /* Azul fuerte */
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            border-radius: 8px;
-            transition: background-color 0.3s ease;
-            margin-top: 30px;
-        }
-        .content button:hover {
-            background-color: #303f9f; /* Azul más oscuro */
+
+        /* IMAGENES */
+        .image-section {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
         }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #5e35b1; /* Morado oscuro */
+        .image-section img {
+            width: 45%;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .image-section img:hover {
+            transform: scale(1.05);
+        }
+
+        /* BOTÓN CTA */
+        .cta-button {
+            display: inline-block;
+            background: #F59E0B;
             color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            font-weight: bold;
             margin-top: 40px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #D97706;
+            transform: scale(1.05);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0d0155;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .image-section {
+                flex-direction: column;
+            }
+
+            .image-section img {
+                width: 90%;
+            }
         }
     </style>
 </head>
 <body>
+
+    <!-- HEADER -->
     <header>
-        <div class="contact-info">
-            <span>Melisa Castillon</span> | 
-            <span>melisacastillon27@gmail.com</span> |
-            <span>+51 991308288</span>
-        </div>
+        <div class="logo">Fullstack</div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="frontend.html">Frontend</a></li>
                 <li><a href="backend.html">Backend</a></li>
-                <li><a href="herramientas.html">Herramientas </a></li>
-                <li><a href="registrar.php">Registrarse</a></li> 
-                <li><a href="login.php">Inicar sesión</a></li>
-                
+                <li><a href="herramientas.html">Herramientas</a></li>
+                <li><a href="registrar.php">Registrarse</a></li>
+                <li><a href="login.php">Iniciar sesión</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="content">
+    <!-- HERO -->
+    <div class="hero">
+        <h1>Backend: La base de todo proyecto web</h1>
+    </div>
+
+    <!-- SECCIÓN PRINCIPAL -->
+    <div class="main-container">
         <h2>¿Qué es el Desarrollo Backend?</h2>
-        <p>El desarrollo backend se centra en el lado del servidor, que es responsable de la lógica de negocios, las bases de datos y el procesamiento de datos detrás de escena de las aplicaciones web y móviles.</p>
-        <p>Mientras que el frontend es la parte visible de una página web, el backend hace que todo funcione. Es la columna vertebral de cualquier aplicación moderna y está estrechamente integrado con el frontend para proporcionar una experiencia de usuario fluida.</p>
-
-        <h3>Habilidades clave en Backend</h3>
-        <ul>
-            <li>
-                <h3>Lenguajes de Programación</h3>
-                <p>Los desarrolladores backend utilizan lenguajes como PHP, Python, Java, Ruby, y más para crear aplicaciones robustas y seguras.</p>
-            </li>
-            <li>
+        <div class="skill-card">
+            <p>Backend es la parte de un sistema o aplicación que gestiona la lógica del servidor, la base de datos y la comunicación con el frontend, asegurando el procesamiento y almacenamiento de datos.</p>
+        </div>
+        <h3>Herramientas</h3>
+        <div class="skills-section">
+            <div class="skill-card">
+                <img src="img/lenguaje.jpg" alt="Lenguajes">
+                <h3>Lenguajes</h3>
+                <p>PHP, Python, Node.js...</p>
+            </div>
+            <div class="skill-card">
+                <img src="img/database.png" alt="Bases de Datos">
                 <h3>Bases de Datos</h3>
-                <p>Las bases de datos como MySQL, PostgreSQL y MongoDB son esenciales para almacenar, recuperar y manipular datos.</p>
-            </li>
-            <li>
+                <p>MySQL, MongoDB...</p>
+            </div>
+            <div class="skill-card">
+                <img src="img/api.png" alt="APIs">
                 <h3>APIs</h3>
-                <p>Los desarrolladores backend crean y gestionan APIs para permitir que el frontend y otros servicios interactúen con la lógica del servidor.</p>
-            </li>
-        </ul>
-        <p>El desarrollo backend también incluye habilidades como la optimización del rendimiento del servidor, la seguridad, y el trabajo con arquitecturas escalables.</p>
+                <p>REST, GraphQL...</p>
+            </div>
+        </div>
 
-        <button onclick="window.location.href='index.html'">Volver al Inicio</button>
-    </section>
+        <div class="image-section">
+            <img src="img/back2.png" alt="Backend Development">
+            <img src="img/backend.png" alt="Backend Servers">
+        </div>
+
+        <a href="index.html" class="cta-button">Volver al Inicio</a>
+    </div>
 
     <footer>
         <p>&copy; 2025 Fullstack - Todos los derechos reservados</p>
     </footer>
+
 </body>
 </html>
