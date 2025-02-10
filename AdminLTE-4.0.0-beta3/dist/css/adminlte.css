@@ -1433,6 +1433,8 @@ progress {
   .col-lg-12 {
     flex: 0 0 auto;
     width: 100%;
+    margin: 20px;
+    padding: 5px;
   }
   .offset-lg-0 {
     margin-left: 0;
@@ -5016,7 +5018,9 @@ textarea.form-control-lg {
     transition: none;
   }
 }
-
+.white-text {
+  color: white !important;
+}
 .progress-bar-striped {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-size: var(--bs-progress-height) var(--bs-progress-height);
