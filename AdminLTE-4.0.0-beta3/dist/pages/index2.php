@@ -1,5 +1,11 @@
-<?php session_start(); ?>
+<?php
+// Iniciar sesión para asegurar que se maneje correctamente
+session_start();
 
+// Aseguramos que los campos de texto estén vacíos al cargar la página
+$username = '';
+$password = '';
+?>
 <!doctype html>
 <html lang="en">
   <!--begin::Head-->
@@ -143,10 +149,29 @@
                     <div class="col-lg-12">
                         <!-- Comienzo de la tarjeta -->
                         <div class="card mb-4">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                        <h3 class="card-title">Lista de Usuarios</h3>
-                        <a href="agregar_user.php" class="btn btn-success">Agregar Usuario</a>
+
+                        
+                    <div class="card-header d-flex justify-content-between align-items-center" >
+                        
+                    <div id="addUserForm" style="padding: 15px;">
+                            <h5>Agregar Usuario</h5>
+                            <form method="POST" action="agregar_user.php" onsubmit="return clearForm()" autocomplete="off">
+                            <div class="mb-3">
+                                    <label for="username" class="form-label">Nombre de Usuario</label>
+                                    <input type="text" class="form-control" id="username" name="username" required autocomplete="off">
+                                    </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Contraseña</label>
+                                    <input type="password" class="form-control" id="password" name="password"  required autocomplete="new-password">
+
+                                </div>
+                                <button type="submit" class="btn btn-success" name="add_user">Agregar</button>
+                            </form>
+                        </div>
+
                     </div>
+                    <h3 class="card-title">Lista de Usuarios</h3>
+
                     <input type="text" id="search" class="form-control mb-3" placeholder="Buscar por nombre de usuario..." onkeyup="searchUser()">
 
                             <div class="card-body">

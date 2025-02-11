@@ -232,7 +232,7 @@ html.maximized-card {
 .card-header {
   position: relative;
   padding: (($card-spacer-y * .5) * 2) $card-spacer-x;
-  background-color: transparent;
+  background-color: rgb(0, 255, 213);
   border-bottom: 1px solid $card-border-color;
 
   @if $enable-rounded {
@@ -262,7 +262,7 @@ html.maximized-card {
 
 .card-title {
   float: left;
-  margin: 0;
+  margin: 20px;
   font-size: $lte-card-title-font-size;
   font-weight: $lte-card-title-font-weight;
 }
