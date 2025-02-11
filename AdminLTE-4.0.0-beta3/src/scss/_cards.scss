@@ -226,6 +226,7 @@ html.maximized-card {
 .card-body,
 .card-footer {
   @include clearfix();
+  background-color: #052c65;
 }
 
 // Box header

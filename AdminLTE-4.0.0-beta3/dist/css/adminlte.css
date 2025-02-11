@@ -220,7 +220,8 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
-  color: var(--bs-heading-color);
+  color: black;
+  font-weight:bolder;
 }
 
 h1, .h1 {
@@ -2088,6 +2089,8 @@ progress {
 }
 .form-label {
   margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #0a53be;
 }
 
 .col-form-label {
@@ -2127,7 +2130,7 @@ progress {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-color: var(--bs-body-bg);
+  background-color: violet;
   background-clip: padding-box;
   border: var(--bs-border-width) solid var(--bs-border-color);
   border-radius: var(--bs-border-radius);
@@ -3101,8 +3104,8 @@ textarea.form-control-lg {
 }
 
 .btn-success {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #198754;
+  --bs-btn-color: #ffffff;
+  --bs-btn-bg: #192287;
   --bs-btn-border-color: #198754;
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #157347;
@@ -4486,14 +4489,16 @@ textarea.form-control-lg {
 }
 
 .card-header {
-  padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
-  margin-bottom: 0;
-  color: var(--bs-card-cap-color);
-  background-color: var(--bs-card-cap-bg);
-  border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color);
+  position: relative;
+  padding: 1rem 1rem;
+  background-color:transparent;
+  border: 1px solid #c0c7cc; 
+ 
 }
 .card-header:first-child {
   border-radius: var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius) 0 0;
+
+
 }
 
 .card-footer {
@@ -14405,14 +14410,7 @@ html.maximized-card {
   content: "";
 }
 
-.card-header {
-  position: relative;
-  padding: 1rem 1rem;
-  background-color: transparent;
-  border-bottom: 1px solid var(--bs-border-color-translucent);
-  border-top-left-radius: 0.375rem;
-  border-top-right-radius: 0.375rem;
-}
+
 .collapsed-card .card-header {
   border-bottom: 0;
 }
@@ -14432,9 +14430,10 @@ html.maximized-card {
 
 .card-title {
   float: left;
-  margin: 0;
+  margin: 20px;
   font-size: 1.1rem;
   font-weight: 400;
+  font-weight: bold;
 }
 
 .btn-tool {
