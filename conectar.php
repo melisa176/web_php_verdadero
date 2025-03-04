@@ -6,7 +6,7 @@ $password = "cas207";
 $dbname = "login_db";
 
 try {
-    // Cambiar $host a $servername
+    
     $pdo = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $username, $password);
 
     // Configuración de PDO para mostrar excepciones en caso de error

@@ -67,19 +67,24 @@
         }
 
         .hero {
-            display: flex;
-            align-items: center;
-            flex-direction: column; /* Alinea los elementos en columna */
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
+            width: 100%; /* Ocupar todo el ancho disponible */
+           margin-top: 5px;
+            margin: auto; /* Centrar la sección en la página */
+            text-align: center; /* Centrar el texto */
+            padding: 100px; /* Espacio interno */
             background: linear-gradient(150deg, #551ff8, #6ac1fc);
             color: white;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
-            position: relative;
-            padding-top: 10%;
+            overflow: hidden; 
+
         }
-    
+
+
+        .hero img {
+            max-width: 50%; /* La imagen no será más ancha que su contenedor */
+            height: 1; /* Mantiene la proporción de la imagen */
+            display: block; /* Elimina espacios extra debajo de la imagen */
+            margin: auto; /* Centrar la imagen horizontalmente */
+        }
 
         .hero h1 {
             font-size: 3.5rem;
@@ -98,6 +103,7 @@
             }
         }
 
+        
         /* CONTENEDOR PRINCIPAL */
         .main-container {
             padding: 80px 20px;
@@ -192,6 +198,7 @@
             color: white;
             padding: 20px;
             text-align: center;
+            margin-top: 1px;
         }
 
         /* RESPONSIVE */
@@ -217,14 +224,20 @@
                 <li><a href="herramientas.html">Herramientas</a></li>
                 <li><a href="registrar.php">Registrarse</a></li>
                 <li><a href="login.php">Iniciar sesión</a></li>
+                <li><a href="Hamburguesa\javascript\index.html">Tienda</a></li>
+                <li><a href="http://localhost:3000/">React_practica</a></li>
+                <li><a href="http://localhost:3001/">React-API</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Desarrollo Web Fullstack</h1>
+        
+        <h1>
+            Desarrollo Web Fullstack</h1>
         <p>EMPLEA HERRAMIENTAS PARA HACER TU PÁGINA</p>
         <img src="img/index.png">
+           
     </section>
     <footer>
         <p>&copy; 2025 Fullstack - Todos los derechos reservados</p>

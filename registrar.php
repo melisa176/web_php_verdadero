@@ -232,12 +232,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="logo">Fullstack</div>
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html">Inicio</a></li>
                 <li><a href="frontend.html">Frontend</a></li>
                 <li><a href="backend.html">Backend</a></li>
                 <li><a href="herramientas.html">Herramientas</a></li>
                 <li><a href="registrar.php">Registrarse</a></li>
                 <li><a href="login.php">Iniciar sesión</a></li>
+                <li><a href="Hamburguesa\javascript\index.html">Tienda</a></li>
+                <li><a href="http://localhost:3000/">React_practica</a></li>
+                <li><a href="http://localhost:3001/">React-API</a></li>
             </ul>
         </nav>
     </header>
@@ -250,7 +253,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             <form class="form" method="POST" action="">
                 <input type="text" name="username" placeholder="Usuario" required>
-                <input type="password" name="password" placeholder="Contraseña" required>
+                <input type="password" name="password" placeholder="Contraseña" required autocomplete="new-password">
                 <button type="submit">Registrar</button>
                 <p>¿Ya tienes una cuenta? <a href="login.php">Inicia sesión aquí</a></p>
                 <?php if (!empty($error_message)): ?>

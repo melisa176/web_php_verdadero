@@ -2130,7 +2130,7 @@ progress {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-color: violet;
+  background-color: transparent;
   background-clip: padding-box;
   border: var(--bs-border-width) solid var(--bs-border-color);
   border-radius: var(--bs-border-radius);
@@ -2598,6 +2598,8 @@ textarea.form-control-lg {
 .form-range:disabled {
   pointer-events: none;
 }
+
+
 .form-range:disabled::-webkit-slider-thumb {
   background-color: var(--bs-secondary-color);
 }
@@ -13014,6 +13016,8 @@ textarea.form-control-lg {
   white-space: nowrap;
   border-bottom: 1px solid var(--bs-border-color);
   transition: width 0.3s ease-in-out;
+  padding: 20px;
+  margin: 10px;
 }
 @media (prefers-reduced-motion: reduce) {
   .sidebar-brand {
@@ -13021,14 +13025,18 @@ textarea.form-control-lg {
   }
 }
 .sidebar-brand .brand-link {
+
   display: flex;
   align-items: center;
   text-decoration: none;
+  flex-direction: column;
 }
+
 .sidebar-brand .brand-link .brand-image {
   float: left;
   width: auto;
   max-height: 33px;
+  margin-bottom: 10px; 
   line-height: 0.8;
 }
 .sidebar-brand .brand-link .brand-image-xs {
