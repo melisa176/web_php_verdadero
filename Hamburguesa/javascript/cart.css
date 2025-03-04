@@ -1,0 +1,62 @@
+body{
+  padding: 10px;
+}
+#cart-container{
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  .tarjeta-producto2{
+    background-color: #ec1a1a;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: auto;   
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  transition: transform 0.3s ease;
+  margin: 5px;
+  align-items: center;
+  }
+  
+  .tarjeta-producto2 img{
+    height: 40%;
+    width: 50%;
+  }
+  
+  .tarjeta-producto2 h3{
+    width: 130px;
+    margin: 10px;
+ 
+  }
+  .tarjeta-producto2 div{
+    background-color: var(--color-acento-claro);
+    padding: 3px;
+    border-radius: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  #totales{
+    text-align: center;
+    color: rgb(0, 0, 0);
+  font-weight: bold; 
+  }
+  
+  #carrito-vacio{
+    text-align: center;
+  }
+  .tarjeta-producto2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);}
+    #carrito-vacio a {
+      color: blue; 
+  }
+  #totales  button{
+    background-color: red;
+    color: white;
+ font-weight: bold; 
+ }

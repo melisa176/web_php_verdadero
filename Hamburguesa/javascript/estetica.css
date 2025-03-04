@@ -1,0 +1,182 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+#logo {
+  height: 80px;
+  width: 80px;
+}
+
+#logo-carrito {
+  height: 40px;
+  width: 40px;
+}
+
+header {
+  background-color: #002395;
+  color: white;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between; /* Separa los tres bloques */
+  align-items: center;
+  margin: 0 20px;
+  background-color: #002395;
+  color: white;
+}
+
+header nav .nav-brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  gap: 15px;  /* Ajuste el espacio entre logo y nombre */
+}
+
+header nav .naver {
+  display: flex;
+  align-items: center;
+  justify-content: center;  /* Los enlaces se centran */
+  gap: 30px;  /* Ajuste el espacio entre los enlaces */
+}
+
+header nav .contact {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;  /* El carrito y "Llamanos" van a la derecha */
+  gap: 20px;  /* Ajuste el espacio entre el carrito y "Llamanos" */
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+a:hover:not(#cart) {
+  color: rgb(0, 38, 255);
+}
+
+#conteo_carrito {
+  background-color: rgb(0, 255, 55);
+  border-radius: 100%;
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  aspect-ratio: 1;
+  text-align: center;
+  color: black;
+  position: absolute;
+}
+
+button {
+  background-color: rgb(12, 8, 218);
+  color: #e5e5e6;
+  border-radius: 7px;
+  border: unset;
+  cursor: pointer;
+  height: 20px;
+  
+}
+#productos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: space-between;
+}
+
+/* Cada tarjeta de producto */
+.tarjeta-producto {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;   /* Tamaño fijo para la tarjeta */
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  transition: transform 0.3s ease;
+  margin: 10px;
+}
+
+/* Efecto cuando se pasa el mouse sobre la tarjeta */
+.tarjeta-producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);}
+
+/* Contenedor para imagen y texto */
+.tarjeta-contenido {
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  margin: 5px;
+}
+
+/* Imagen del producto */
+.imagen-producto {
+  width: 50%;
+  height: 80%;
+  border-radius: 5px;
+  margin: 5px;
+  box-shadow: 0 8px 16px rgba(202, 189, 189, 0.2);
+}
+
+/* Información del producto */
+.informacion-producto {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+ }
+
+.informacion-producto h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000000;
+  margin: 10px 0;
+}
+
+.informacion-producto .descripcion {
+  font-size: 0.8rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.informacion-producto .precio {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: red;
+  margin: 10px 0;
+}
+
+/* Botón de agregar al pedido */
+/* Botón de agregar al pedido */
+.tarjeta-producto button {
+  background-color: #002395;  /* Fondo azul */
+  color: white;               /* Texto blanco */
+  border: none;               /* Sin borde */
+  padding: 9px 10px;         /* Relleno del botón (más alto y ancho) */
+  border-radius: 20px;        /* Bordes redondeados */
+  width: auto;                /* Ancho automático */
+  cursor: pointer;           /* Cursor en forma de mano al pasar sobre el botón */
+  font-size: 0.9rem;            /* Tamaño de texto */
+  text-align: center;         /* Alineación del texto */
+  font-weight: bold;          /* Texto en negrita */
+  transition: background-color 0.3s ease;  /* Transición suave */
+  height: auto;
+}
+
+
+
+.tarjeta-producto button:hover {
+  background-color: #1c56b3;
+}

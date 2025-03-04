@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="estetica.css">
+    <link rel="stylesheet" href="estetica.css">
+    <link rel="stylesheet" href="cart.css">
+    <title>Carrito</title>
+    <script src="./js/comida.js"></script>
+
+    <script src="./js/cartServicio.js" defer></script>
+	<script src="./js/cart.js" defer></script>
+    
+</head>
+<body>
+    <header>
+        <nav>
+           
+            <div class="nav-brand">
+                <a href="./index.html"><img src="../burger.png" id="logo"></a>
+                <h1 id="brand-name">BURGERS</h1>
+            </div>
+            <div class="naver">
+                <a href="">Quienes somos</a>
+                <a href="">Contacto</a>
+                <a href="./index.html">Lista de productos</a>
+            </div>
+            <div class="contact">
+                <a href="">Llamanos</a>
+                <a href="./cart.html" ><img src="../carrito.png" id="logo-carrito"><span id="conteo_carrito">0</span></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        
+
+        <p id="carrito-vacio"> <a href="index.html">Volver a menú</a></p>
+		<section id="cart-container"></section>
+
+        <section id="totales">
+            <p>Total unidades: <span id="cantidad">0</span></p>
+            <p>Total precio: S/.<span id="precio">0</span></p>
+            <button >Comprar</button>
+            <button id="reiniciar">Reiniciar</button>
+        </section>
+
+    </main>
+
+
+</body>
+</html>
