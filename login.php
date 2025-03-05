@@ -94,35 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             background: #D97706;
             transform: scale(1.05);
         }
-        header.scrolled {
-            background: #027373;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        header .logo {
-            color: white;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        header nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
-
-        header nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-size: 1rem;
-            font-weight: bold;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-
-        header nav ul li a:hover {
-            color: #FBBF24;
-            transform: scale(1.1);
-        }
+        
 
         .hero {
             display: flex;
@@ -234,22 +206,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
 
-    <header>
-        <div class="logo">Fullstack</div>
-        <nav>
-            <ul>
-            <li><a href="index.html">Inicio</a></li>
-                <li><a href="frontend.html">Frontend</a></li>
-                <li><a href="backend.html">Backend</a></li>
-                <li><a href="herramientas.html">Herramientas</a></li>
-                <li><a href="registrar.php">Registrarse</a></li>
-                <li><a href="login.php">Iniciar sesión</a></li>
-                <li><a href="Hamburguesa\javascript\index.html">Tienda</a></li>
-                <li><a href="http://localhost:3000/">React_practica</a></li>
-                <li><a href="http://localhost:3001/">React-API</a></li>
-            </ul>
-        </nav>
-    </header>
+<div id="header"></div>
+    <script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+    </script>
 
     <div class="hero">
         <div class="container">

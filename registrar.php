@@ -36,6 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="hero.css">
     <style>
 
          /* Reset CSS */
@@ -47,85 +49,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            overflow-x: hidden;
+                       
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
 
         }
-       
-        /* HEADER */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #0d0155;
-            padding: 20px 50px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            transition: background 0.3s ease;
-        }
-
-             /* BOTÓN CTA */
-             .cta-button {
-            display: inline-block;
-            background: #F59E0B;
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 40px;
-            transition: background 0.3s ease, transform 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background: #D97706;
-            transform: scale(1.05);
-        }
-        header.scrolled {
-            background: #027373;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        header .logo {
-            color: white;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        header nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
-
-        header nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-size: 1rem;
-            font-weight: bold;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-
-        header nav ul li a:hover {
-            color: #FBBF24;
-            transform: scale(1.1);
-        }
-
         .hero {
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
             text-align: center;
             background: linear-gradient(150deg, #551ff8, #6ac1fc);         
-               color: white;
+            color: white;
             text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
             position: relative;
         }
@@ -135,27 +70,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             position: relative;
             animation: fadeIn 1.5s ease-out;
         }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        footer {
-            background: #0d0155;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-
-
-
         .container {
             width: 400px;
             background: white;
@@ -163,6 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             overflow: hidden;
             text-align: center;
+            
         }
 
         .header {
@@ -174,8 +89,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         .header img {
             width: 50px;
-            margin-bottom: 10px;
+            height:50px;
+            margin-top: 0;
         }
+
+      
 
         .form {
             padding: 20px;
@@ -228,22 +146,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
 
-    <header>
-        <div class="logo">Fullstack</div>
-        <nav>
-            <ul>
-            <li><a href="index.html">Inicio</a></li>
-                <li><a href="frontend.html">Frontend</a></li>
-                <li><a href="backend.html">Backend</a></li>
-                <li><a href="herramientas.html">Herramientas</a></li>
-                <li><a href="registrar.php">Registrarse</a></li>
-                <li><a href="login.php">Iniciar sesión</a></li>
-                <li><a href="Hamburguesa\javascript\index.html">Tienda</a></li>
-                <li><a href="http://localhost:3000/">React_practica</a></li>
-                <li><a href="http://localhost:3001/">React-API</a></li>
-            </ul>
-        </nav>
-    </header>
+<div id="header"></div>
+    <script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+    </script>
+
 
     <div class="hero">
         <div class="container">
