@@ -10,7 +10,7 @@ body {
     line-height: 19px;
     font-weight: 400;
     color: #444445;
-    background: linear-gradient(180deg, #a8caff, #f4f9ff);
+    background-color: linear-gradient(180deg, #a8caff, #f4f9ff);
     height: 100%;
     overflow-x: hidden;
     text-rendering: optimizeLegibility;
@@ -221,22 +221,9 @@ p {
 }
     
 
-.cta-button {
-    background-color: #1407d0;            color: white;
-    padding: 15px 25px;
-    border-radius: 30px;
-    font-size: 18px;
-    text-decoration: none;
-    margin: 40px;
-    font-weight: bold;
-}
-
-.cta-button:hover {
-    background-color: #0056b3;
-}
 
 .hero img {
-    width: 48%; /* Ajusta el tamaño de la imagen */
-    height: 85vh;
+    width: 50%; /* Ajusta el tamaño de la imagen */
+    height: 70vh;
     border-bottom-left-radius: 20%;
 }
