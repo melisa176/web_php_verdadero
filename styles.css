@@ -151,6 +151,17 @@ body *::-webkit-scrollbar-thumb {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+.cta-button {
+    display: inline-block;
+    background: #1407d0;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 40px;
+    
+}
 .sumilla span:first-child {
     color: #1407d0; /* Color para "FULL" */
     font-size: 30px;
@@ -194,7 +205,7 @@ letter-spacing: .05em;
 p {
     font-size: 20px;
     color: #000;
-    margin: 35px 0;
+    margin: 25px 0;
 }
 
 .hero span {
@@ -226,4 +237,5 @@ p {
     width: 50%; /* Ajusta el tamaño de la imagen */
     height: 70vh;
     border-bottom-left-radius: 20%;
+    margin: 0;
 }
