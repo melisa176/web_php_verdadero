@@ -33,9 +33,10 @@
 /* CONTENEDOR PRINCIPAL */
 .main-container {
     padding: 80px 20px;
-    max-width: 1200px;
-    margin: auto;
+    
+   
     text-align: center;
+    background: linear-gradient(135deg, #a8e6cf, #d4a5a5, #c792ea);
 }
 
 .main-container h2 {
@@ -48,6 +49,7 @@
     font-size: 1.8rem;
     color: #1F2937;
     margin: 15px;
+    padding: 5px;
 }
 /* SECCIÓN DE HABILIDADES */
 .skills-section {
@@ -81,7 +83,7 @@
     font-size: 1.6rem;
     margin: 10px;
     padding: 10px;
-    background-color: #D97706;
+    
 }
 
 .skill-card p {
