@@ -25,10 +25,86 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <style>
+      body {
+    padding-top: 80px; /* Ajusta según la  altura del header */
+}
+.header-container {
+    display: flex;
+    justify-content: center; /* Centra el contenido */
+    width: 100%; /* Asegura que no se corte antes de llegar al borde */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #0d0155;
+    z-index: 1000;
+}
+
+/* Contenedor interno del header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Define el ancho máximo */
+    width: 100%;
+    padding: 15px 30px;
+}
+
+      header.scrolled {
+          background: #111827;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      header .logo {
+          color: white;
+          font-size: 2rem;
+          font-weight: 700;
+      }
+
+      header nav ul {
+          list-style: none;
+          display: flex;
+          gap: 25px;
+      }
+
+      header nav ul li a {
+          text-decoration: none;
+          color: white;
+          font-size: 1rem;
+          font-weight: bold;
+          transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      header nav ul li a:hover {
+          color: #FBBF24;
+          transform: scale(1.1);
+      }
+  </style>
   </head>
   <body>
+     
+<div class="header-container">
+  <header>
+      <div class="logo">Fullstack</div>
+      <nav>
+          <ul>
+              <li><a href="http://localhost/web_php_verdadero/index.html">Inicio</a></li>
+              <li><a href="http://localhost/web_php_verdadero/frontend.html">Frontend</a></li>
+              <li><a href="http://localhost/web_php_verdadero/backend.html">Backend</a></li>
+              <li><a href="http://localhost/web_php_verdadero/herramientas.html">Herramientas</a></li>
+              <li><a href="http://localhost/web_php_verdadero/registrar.php">Registrarse</a></li>
+              <li><a href="http://localhost/web_php_verdadero/login.php">Iniciar sesión</a></li>
+              <li><a href="http://localhost/web_php_verdadero/Hamburguesa/javascript/index.html">Tienda</a></li>
+              <li><a href="http://localhost:3000/">React_practica</a></li>
+              <li><a href="http://localhost:3001/">React-API</a></li>
+          </ul>
+      </nav>
+  </header>
+</div>
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
