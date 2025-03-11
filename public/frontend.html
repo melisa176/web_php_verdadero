@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Frontend - Fullstack</title>
+    <script src="https://unpkg.com/scrollreveal"></script> <!-- Animaciones Scroll -->
+    <link rel="stylesheet" href="../src/styles/header.css">
+    <link rel="stylesheet" href="../src/styles/style.css">
+    <link rel="stylesheet" href="../src/styles/footer.css">
+    <link rel="stylesheet" href="../src/styles/frontend.css"> <!-- Vincula el CSS de Frontend -->
+</head>
+<body>
+    <!-- Header dinámico -->
+    <div id="header"></div>
+    <script>
+        fetch("../src/components/header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+    </script>
+
+    <!-- Hero Section -->
+    <div class="hero" style="background: linear-gradient(180deg, #a8caff 0%, #f4f9ff 100%);">
+        <div>
+            <h1>Desarrollo <span>Frontend</span></h1>
+            <p>Crea interfaces web interactivas y dinámicas con tecnologías modernas.</p>
+            <p style="color: grey;">Consulta los mejores recursos para mejorar tus habilidades en Frontend.</p>
+            <p class="highlight"><i>Potencia tu desarrollo web con las herramientas más actuales.</i></p>
+        </div>
+        <!-- Imagen al costado del texto -->
+        <img src="../img/frontend_index.png" alt="Imagen ilustrativa">
+    </div>
+
+    <!-- Frontend Container -->
+    <div class="frontend-container">
+        <!-- Texto Frontend -->
+        <div class="frontend-text">
+            <h1>¿Qué es el Desarrollo Frontend?</h1>
+            <p>Frontend es la parte visual e interactiva de una aplicación web. Se encarga de la interfaz de usuario, la experiencia visual y la comunicación con el backend.</p>
+            <p class="highlight">Potencia tu desarrollo web con las herramientas más actuales.</p>
+        </div>
+        <!-- Imagen Frontend -->
+        <div class="frontend-image">
+            <img src="../img/frontend.png" alt="Imagen de Frontend">
+        </div>
+    </div>
+
+    <!-- Tools Section -->
+    <div class="tools-section">
+        <div class="tool-card">
+            <img src="../img/html.png" alt="HTML">
+            <h3>HTML</h3>
+            <p>Base de toda página web.</p>
+            <div class="tool-info">La estructura de un sitio web comienza con HTML, donde se definen los elementos básicos de la página.</div>
+        </div>
+        <div class="tool-card">
+            <img src="../img/css.png" alt="CSS">
+            <h3>CSS</h3>
+            <p>Estilización y diseño web.</p>
+            <div class="tool-info">CSS permite diseñar y estilizar el contenido, dándole color, forma y tamaño a los elementos HTML.</div>
+        </div>
+        <div class="tool-card">
+            <img src="../img/javascript.png" alt="JavaScript">
+            <h3>JavaScript</h3>
+            <p>Interactividad y dinamismo.</p>
+            <div class="tool-info">Con JavaScript, se agrega funcionalidad interactiva a las páginas web, haciendo que respondan a las acciones del usuario.</div>
+        </div>
+    </div>
+
+    <!-- Footer dinámico -->
+    <div id="footer"></div>
+    <script>
+        fetch("../src/components/footer.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+</body>
+</html>

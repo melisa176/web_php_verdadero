@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encabezado con Estilo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/styles/header.css">
+    <link rel="stylesheet" href="../src/styles/style.css">
+    <link rel="stylesheet" href="../src/styles/footer.css">
+
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch("../src/components/header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+    </script>
+
+    <div class="hero">
+        <div>
+            <h1>Desarrollo <span>Fullstack</span></h1>
+            <p>Construye aplicaciones web con las tecnologías recientes</p>
+            <p style="color: grey;">Consulta los recursos para desarrolladores</p>
+            
+
+            <a href="http://localhost:8000/login" class="cta-button">Login</a>
+            
+            <p class="highlight"><i>Optimizando tu experiencia de desarrollo Fullstack.</i></p>
+        </div>
+        <!-- Imagen al costado del texto -->
+        <img src="../img/login.png" alt="Imagen ilustrativa">
+    </div>
+    <div id="footer"></div>
+    <script>
+        fetch("../src/components/footer.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+
+    
+</body>
+</html>

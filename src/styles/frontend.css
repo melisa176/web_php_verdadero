@@ -1,0 +1,148 @@
+/* Frontend Container */
+.frontend-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px auto;
+    max-width: auto;
+    padding: 60px;
+    gap: 30px;
+    background: linear-gradient(180deg, #f4f9ff 0%, #ffffff 100%); /* Degradado muy suave */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    transition: transform 0.3s ease-in-out;
+}
+
+.frontend-container:hover {
+    transform: translateY(-8px); /* Efecto hover suave */
+}
+
+/* Texto Frontend */
+.frontend-text {
+    width: auto;
+    text-align: left;
+}
+
+.frontend-text h1 {
+    font-size: 2.0rem;
+    color: #3f4a61; /* Color oscuro suave */
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.frontend-text p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.frontend-text .highlight {
+    font-size: 22px;
+    color: #ff6f61; /* Un rojo suave */
+    font-weight: bold;
+    text-decoration: none;
+    text-decoration-color: #ff6f61;
+}
+
+/* Contenedor de la imagen Frontend */
+.frontend-image {
+    width: 50%;
+    text-align: center;
+}
+
+.frontend-image img {
+    width: 100%;
+    height: auto;
+    max-width: 700px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.frontend-image img:hover {
+    transform: scale(1.05); /* Efecto sutil de aumento */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Tools Section */
+.tools-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 30px;
+    padding: 40px;
+}
+
+.tool-card {
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    background: linear-gradient(180deg, #f9f9f9 0%, #ffffff 100%); /* Degradado suave hacia blanco */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra más suave */
+}
+
+.tool-card img {
+    width: 70px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.tool-card:hover img {
+    transform: scale(1.1);
+}
+
+.tool-card h3 {
+    font-size: 1.6rem;
+    color: #3f4a61; /* Color suave y profesional */
+    margin-bottom: 15px;
+}
+
+.tool-card p {
+    font-size: 14px;
+    color: #777; /* Color más suave para el texto */
+    line-height: 1.5;
+}
+
+.tool-card .tool-info {
+    font-size: 14px;
+    color: #555;
+    margin-top: 15px;
+    font-weight: normal;
+    opacity: 0.8;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .frontend-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .frontend-text {
+        width: 100%;
+    }
+
+    .frontend-image {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .tools-section {
+        flex-direction: column;
+    }
+
+    .tool-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}

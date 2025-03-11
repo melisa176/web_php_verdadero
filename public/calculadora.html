@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/styles/header.css">
+    <link rel="stylesheet" href="../src/styles/style.css">
+    <link rel="stylesheet" href="../src/styles/footer.css">
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch("../src/components/header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+    </script>
+    <div>
+        <iframe
+            src="http://localhost/ejemplo/calculadora.html"
+            width="100%"
+            height="700px"
+            title="Calculadora"
+            style="border: none;"
+        ></iframe>
+    </div>
+    <div id="footer"></div>
+    <script>
+        fetch("../src/components/footer.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+</body>
+</html>

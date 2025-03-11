@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Backend - Fullstack</title>
+    <script src="https://unpkg.com/scrollreveal"></script> <!-- Animaciones Scroll -->
+    <link rel="stylesheet" href="../src/styles/header.css">
+    <link rel="stylesheet" href="../src/styles/style.css">
+    <link rel="stylesheet" href="../src/styles/footer.css">
+    <link rel="stylesheet" href="../src/styles/backend.css">  <!-- Vincula el CSS de Backend -->
+</head>
+<body>
+    <!-- Header dinámico -->
+    <div id="header"></div>
+    <script>
+        fetch("../src/components/header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+    </script>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div>
+            <h1>Desarrollo <span>Backend</span></h1>
+            <p>Gestiona la lógica del servidor, el procesamiento de datos y la interacción entre el frontend y el servidor.</p>
+            <p style="color: grey;">Asegura el flujo de datos y la correcta comunicación entre el frontend y el servidor.</p>
+            <p class="highlight"><i>Potencia tu desarrollo web con herramientas de backend robustas.</i></p>
+        </div>
+        <!-- Imagen ilustrativa de Backend -->
+        <img src="../img/backend2.png" alt="Imagen ilustrativa">
+    </div>
+
+    <!-- Backend Container -->
+    <div class="backend-container">
+        <!-- Texto Backend -->
+        <div class="backend-text">
+            <h1>¿Qué es el Desarrollo Backend?</h1>
+            <p>El backend es la parte de un sistema o aplicación que gestiona la lógica del servidor, la base de datos y la comunicación con el frontend, asegurando el procesamiento y almacenamiento de datos.</p>
+            <p class="highlight">Potencia tu desarrollo web con herramientas de backend robustas.</p>
+        </div>
+        <!-- Imagen Backend -->
+        <div class="backend-image">
+            <img src="../img/backend.png" alt="Imagen de Backend">
+        </div>
+    </div>
+
+    <!-- Tools Section -->
+    <div class="tools-section">
+        <div class="tool-card">
+            <img src="../img/lenguaje.jpg" alt="Lenguajes">
+            <h3>Lenguajes</h3>
+            <p>PHP, Python, Node.js...</p>
+        </div>
+        <div class="tool-card">
+            <img src="../img/database.png" alt="Bases de Datos">
+            <h3>Bases de Datos</h3>
+            <p>MySQL, MongoDB...</p>
+        </div>
+        <div class="tool-card">
+            <img src="../img/api.png" alt="APIs">
+            <h3>APIs</h3>
+            <p>REST, GraphQL...</p>
+        </div>
+    </div>
+
+    <!-- Image Section -->
+    <div class="image-section">
+        <img src="../img/back2.png" alt="Backend Development">
+    </div>
+
+    <a href="index.html" class="cta-button">Volver al Inicio</a>
+
+    <!-- Footer dinámico -->
+    <div id="footer"></div>
+    <script>
+        fetch("../src/components/footer.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+</body>
+</html>
